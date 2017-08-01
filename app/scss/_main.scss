@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  color: $mainColor;
   font-family: $fontFamily;
 }
 
@@ -26,6 +25,7 @@ a {
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  color: $mainColor;
   &__text {
     position: relative;
     max-width: 90%;
@@ -56,16 +56,64 @@ a {
 
 .copyright {
   width: 100%;
-  position: absolute;
-  bottom: 2rem;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-end;
-  padding: 0 1rem;
+  &--absolute {
+    position: absolute;
+    bottom: 2rem;
+    padding: 0 1rem;
+  }
   &__link {
     color: $linkColor;
     font-size: .8rem;
     margin: 0 .5rem;
+    &--white {
+      color: $linkColorWhite;
+    }
+  }
+}
+
+.settings {
+  min-width: 250px;
+  padding: 1rem;
+  color: $settingsColor;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  &__categories {
+    margin: 1rem 0;
+    font-weight: 700;
+  }
+}
+
+.radio {
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-size: .8rem;
+  &__input {
+    display: none;
+  }
+  &__text:before {
+    content: "";
+    display: inline-block;
+    margin-right: .5rem;
+    width: .5rem;
+    height: .5rem;
+    box-shadow: 0 0 0 1px $radioColor;
+    background: $radioBg;
+    border: .1rem solid $radioBg;
+    border-radius: 50%;
+  }
+  &__input:checked + .radio__text:before {
+    background: $radioColor;
+  }
+  &__text {
+    text-transform: capitalize;
   }
 }

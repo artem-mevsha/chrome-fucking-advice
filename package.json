@@ -1,10 +1,10 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
+  "name": "chrome-fucking-advice",
+  "description": "This extensions fetches advice from http://fucking-great-advice.ru and shows it on chrome start page",
   "private": true,
-  "author": "Brunch",
+  "author": "Artem Mevsha",
   "version": "0.0.1",
-  "repository": "",
+  "repository": "https://github.com/artem-mevsha/chrome-fucking-advice",
   "scripts": {
     "start": "brunch watch --server",
     "build": "brunch build --production"

@@ -33,11 +33,10 @@ html {
   font-size: 16px; }
 
 body {
-  color: #fff;
   font-family: helvetica,sans-serif; }
 
 a {
-  color: rgba(255, 255, 255, 0.6);
+  color: #666;
   text-decoration: underline; }
 
 .advice {
@@ -54,7 +53,8 @@ a {
           justify-content: center;
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  color: #fff; }
 
 .advice__text {
   position: relative;
@@ -88,24 +88,79 @@ a {
 
 .copyright {
   width: 100%;
-  position: absolute;
-  bottom: 32px;
-  bottom: 2rem;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
-  -webkit-box-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+          align-items: center;
   -webkit-box-pack: end;
-          justify-content: flex-end;
+          justify-content: flex-end; }
+
+.copyright--absolute {
+  position: absolute;
+  bottom: 32px;
+  bottom: 2rem;
   padding: 0 16px;
   padding: 0 1rem; }
 
 .copyright__link {
-  color: rgba(255, 255, 255, 0.6);
+  color: #666;
   font-size: 12.8px;
   font-size: .8rem;
   margin: 0 8px;
   margin: 0 .5rem; }
+
+.copyright__link--white {
+  color: rgba(255, 255, 255, 0.6); }
+
+.settings {
+  min-width: 250px;
+  padding: 16px;
+  padding: 1rem;
+  color: #666; }
+
+.settings__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  line-height: 1; }
+
+.settings__categories {
+  margin: 16px 0;
+  margin: 1rem 0;
+  font-weight: 700; }
+
+.radio {
+  display: block;
+  position: relative;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-size: 12.8px;
+  font-size: .8rem; }
+
+.radio__input {
+  display: none; }
+
+.radio__text:before {
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  margin-right: .5rem;
+  width: 8px;
+  width: .5rem;
+  height: 8px;
+  height: .5rem;
+  box-shadow: 0 0 0 1px #666;
+  background: #fff;
+  border: 1.6px solid #fff;
+  border: 0.1rem solid #fff;
+  border-radius: 50%; }
+
+.radio__input:checked + .radio__text:before {
+  background: #666; }
+
+.radio__text {
+  text-transform: capitalize; }

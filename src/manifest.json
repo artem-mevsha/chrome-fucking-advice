@@ -1,13 +1,12 @@
 {
   "manifest_version": 2,
-
-  "name": "Fucking great advice",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "Охуенный блять совет",
+  "description": "This extensions fetches advice from http://fucking-great-advice.ru and shows it on chrome start page",
   "version": "1.0",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
-    "default_title": "Click here!"
+    "default_title": "Охуенный блять совет"
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-PqNKtm4HdRbX8I3Z2HjOFMutojX5VMYsGPBPWJLG988='; object-src 'self'",
   "chrome_url_overrides": {
