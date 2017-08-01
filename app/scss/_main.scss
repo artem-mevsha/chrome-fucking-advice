@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $fontSize;
+}
+
+body {
+  color: $mainColor;
+  font-family: $fontFamily;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: underline;
+}
+
+.advice {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__text {
+    position: relative;
+    max-width: 90%;
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: all 300ms linear;
+    z-index: 1;
+    &--ready {
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $overlayBg;
+    opacity: .5;
+    z-index: 0;
+  }
+}
+
+.copyright {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  &__link {
+    color: $linkColor;
+    font-size: .8rem;
+    margin: 0 .5rem;
+  }
+}
