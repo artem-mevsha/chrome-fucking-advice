@@ -12,7 +12,7 @@ exports.files = {
 };
 
 exports.paths = {
-  public: 'src',
+  public: 'dev-fucking-great-advice',
 };
 
 exports.plugins = {

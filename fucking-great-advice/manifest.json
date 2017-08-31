@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Охуенный блять совет",
-  "description": "This extensions fetches advice from http://fucking-great-advice.ru and shows it on chrome start page",
+  "description": "Показывает на стартовой странице охуенный совет. Использует fucking-great-advice.ru как кладезь мудрости и мотивации",
   "version": "1.0",
   "browser_action": {
     "default_icon": "icon.png",
