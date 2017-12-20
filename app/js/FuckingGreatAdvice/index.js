@@ -22,6 +22,7 @@ export default class FuckingGreatAdvice {
     this.url = url;
     this.apiEndpoint = 'api';
     this.soundSrc = `${url}`;
+    this.errorText = 'Ошибка скоро будет исправлена. Потерпи блять!';
     this.init();
   }
 
@@ -47,7 +48,8 @@ export default class FuckingGreatAdvice {
       mode: 'cors',
     })
     .then(response => response.json())
-    .then(json => this.renderQuote(json.text));
+    .then(json => this.renderQuote(json.text))
+    .catch(() => this.renderQuote(this.errorText));
   }
 
   renderQuote(text) {

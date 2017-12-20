@@ -166,6 +166,7 @@ var FuckingGreatAdvice = function () {
     this.url = url;
     this.apiEndpoint = 'api';
     this.soundSrc = '' + url;
+    this.errorText = 'Ошибка скоро будет исправлена. Потерпи блять!';
     this.init();
   }
 
@@ -202,6 +203,8 @@ var FuckingGreatAdvice = function () {
         return response.json();
       }).then(function (json) {
         return _this.renderQuote(json.text);
+      }).catch(function () {
+        return _this.renderQuote(_this.errorText);
       });
     }
   }, {
