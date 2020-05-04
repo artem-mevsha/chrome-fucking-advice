@@ -1,0 +1,10 @@
+{
+  "newtab": {
+    "message": "Новая вкладка",
+    "description": "Page title for New Tab"
+  },
+  "default_error": {
+    "message": "Где<br> блять<br> интернет?",
+    "description": "Default error message"
+  }
+}
