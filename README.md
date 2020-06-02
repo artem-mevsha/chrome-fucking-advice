@@ -1,18 +1,34 @@
-# Fucking great advice chrome extension
+# chrome-fucking-advice
 
-Extension for chrome which show fucking great advice on new tab page.
+## Project setup
+```
+yarn install
+```
 
-## For developers
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
 
-* Install (if you don't have them):
-    * [Node.js](http://nodejs.org): `brew install node` on OS X
-    * [Brunch](http://brunch.io): `npm install -g brunch`
-    * Brunch plugins and app dependencies: `npm install`
-* Run:
-    * `npm start` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-    * `npm run build` — builds minified project for production
-* Learn:
-    * `dev-fucking-great-advice/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
-    * `fucking-great-advice/` dir production-ready app. This folder is uploaded to Chrome Web Store
-    * Place static files you want to be copied from `app/assets/` to `public/`.
-    * [Brunch site](http://brunch.io), [Getting started guide](https://github.com/brunch/brunch-guide#readme)
+### Compiles and watch to debug chrome extenstion in developlent mode
+```
+yarn run build-watch
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
