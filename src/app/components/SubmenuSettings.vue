@@ -4,10 +4,7 @@
       <div class="settings__content">
         <div class="submenu__link submenu__link_size_small submenu__link_disabled">Дизайн</div>
         <ul class="settings__items" v-if="options">
-          <li class="settings__item"
-            :key="index"
-            v-for="(option, index) in options"
-          >
+          <li class="settings__item" :key="index" v-for="(option, index) in options">
             <fga-settings-checkbox :option="option" />
           </li>
         </ul>
@@ -17,27 +14,27 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import FgaSettingsCheckbox from './SettingsCheckbox.vue'
+import { mapState } from 'vuex';
+import FgaSettingsCheckbox from './SettingsCheckbox';
 
 export default {
   name: 'FgaSubmenuSettings',
   components: {
-    FgaSettingsCheckbox
+    FgaSettingsCheckbox,
   },
   computed: {
     ...mapState({
-      options: state => state.settings.options
+      options: (state) => state.settings.options,
     }),
-    adviceUrl () {
-      return this.$store.getters.adviceUrl
-    }
-  }
-}
+    adviceUrl() {
+      return this.$store.getters.adviceUrl;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/variables";
+@import '../scss/variables';
 
 .settings {
   display: block;

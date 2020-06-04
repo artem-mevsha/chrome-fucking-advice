@@ -4,29 +4,26 @@
       <div class="submenu__content">
         <nav class="submenu__nav submenu__nav_main">
           <ul v-if="menuItems">
-            <li
-              :key="menuItem.slug"
-              v-for="menuItem in menuItems"
-            >
+            <li :key="menuItem.slug" v-for="menuItem in menuItems">
               <template v-if="menuItem.hasSubMenu">
                 <a class="submenu__link"
-                  :class="{ 'submenu__link_active' : menuItem.slug === activeSubmenu }"
+                  :class="{ submenu__link_active: menuItem.slug === activeSubmenu }"
                   @click.prevent="showSubmenu(menuItem.slug)"
                 >{{ menuItem.name }}</a>
               </template>
               <template v-else>
-                <a class="submenu__link"
-                  :href="menuItem.url"
-                >{{ menuItem.name }}</a>
+                <a class="submenu__link" :href="menuItem.url">{{ menuItem.name }}</a>
               </template>
             </li>
           </ul>
           <div class="social">
-            <a class='social__link'
+            <a class="social__link"
               :key="index"
               v-for="(link, index) in social"
               :href="link.url"
-              ><font-awesome-icon :icon="['fab', link.alias]" /></a>
+            >
+              <font-awesome-icon :icon="['fab', link.alias]" />
+            </a>
           </div>
         </nav>
         <transition appear name="submenu-secondary-slide" mode="out-in">
@@ -39,36 +36,36 @@
 </template>
 
 <script>
-import FgaSubmenuTags from './SubmenuTags.vue'
-import FgaSubmenuSettings from './SubmenuSettings.vue'
+import FgaSubmenuTags from './SubmenuTags';
+import FgaSubmenuSettings from './SubmenuSettings';
 
 export default {
   name: 'FgaSubmenu',
   components: {
     FgaSubmenuTags,
-    FgaSubmenuSettings
+    FgaSubmenuSettings,
   },
   computed: {
-    menuItems () {
-      return this.$store.state.menu.menuItems
+    menuItems() {
+      return this.$store.state.menu.menuItems;
     },
-    social () {
-      return this.$store.state.menu.social
+    social() {
+      return this.$store.state.menu.social;
     },
-    activeSubmenu () {
-      return this.$store.state.menu.activeSubmenu
-    }
+    activeSubmenu() {
+      return this.$store.state.menu.activeSubmenu;
+    },
   },
   methods: {
-    showSubmenu (slug) {
-      this.$store.dispatch('SHOW_SUBMENU', slug)
-    }
-  }
-}
+    showSubmenu(slug) {
+      this.$store.dispatch('SHOW_SUBMENU', slug);
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-@import "../scss/variables";
+@import '../scss/variables';
 
 .submenu {
   display: block;
@@ -78,7 +75,7 @@ export default {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.95);
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
   font-family: $font-helvetica;
   z-index: 2;
 }
@@ -134,9 +131,9 @@ export default {
     letter-spacing: 0;
     text-decoration: none;
     white-space: nowrap;
-    transition: color .33s ease;
+    transition: color 0.33s ease;
     font-size: 7.2rem;
-    line-height: .89;
+    line-height: 0.89;
     color: #999;
     user-select: none;
     cursor: pointer;
@@ -159,7 +156,7 @@ export default {
 .submenu__link_size_small {
   & {
     font-size: 5rem;
-    line-height: .92;
+    line-height: 0.92;
     color: #333;
     &:hover {
       color: #ccc;
@@ -180,7 +177,7 @@ export default {
 
 .submenu__counter {
   position: fixed;
-  margin: .2rem 0 0 -.2rem;
+  margin: 0.2rem 0 0 -0.2rem;
   top: 16.666666666666668%;
   left: 83.33333333333334%;
   width: 25%;
@@ -195,7 +192,7 @@ export default {
   font-family: $font-helvetica;
   color: #333;
   font-size: 11.5rem;
-  line-height: .8;
+  line-height: 0.8;
 }
 
 .submenu__footer {
@@ -225,8 +222,8 @@ export default {
     font-family: $font-bebas;
     font-size: 1.4rem;
     text-decoration: none;
-    letter-spacing: .02;
-    transition: color .3s ease;
+    letter-spacing: 0.02;
+    transition: color 0.3s ease;
   }
   &.router-link-exact-active {
     display: none;
@@ -277,7 +274,7 @@ export default {
   background: none;
   font-size: 3rem;
   margin-right: 1rem;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
   &:hover {
     color: #fff;
   }

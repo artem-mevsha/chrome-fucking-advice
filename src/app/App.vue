@@ -9,31 +9,31 @@
 </template>
 
 <script>
-import getMessage from './common/get-message'
-import FgaSplashscreen from './components/Splashscreen.vue'
-import FgaHeader from './components/UI.vue'
-import FgaFrontpage from './components/Frontpage.vue'
+import getMessage from './common/get-message';
+import FgaSplashscreen from './components/Splashscreen';
+import FgaHeader from './components/UI';
+import FgaFrontpage from './components/Frontpage';
 
 export default {
   name: 'Fga',
-  beforeCreate () {
-    document.title = getMessage('newtab', 'New Tab')
+  beforeCreate() {
+    document.title = getMessage('newtab', 'New Tab');
   },
-  created () {
-    this.$store.dispatch('FETCH_ALL_DATA')
-    this.$store.dispatch('SYNC_SETTINGS')
+  created() {
+    this.$store.dispatch('FETCH_ALL_DATA');
+    this.$store.dispatch('SYNC_SETTINGS');
   },
   computed: {
-    isLoading () {
-      return this.$store.state.isLoading
-    }
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
   },
   components: {
     FgaSplashscreen,
     FgaHeader,
-    FgaFrontpage
-  }
-}
+    FgaFrontpage,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -44,7 +44,7 @@ export default {
 
 body,
 html {
-  height:100%;
+  height: 100%;
   background: $color-black;
   margin: 0;
   font-family: $font-bebas;
@@ -54,55 +54,57 @@ html {
   font-weight: 300;
 }
 
-@media only screen and (max-height:800px) {
+@media only screen and (max-height: 800px) {
   html,
   body {
     font-size: 9px;
   }
 }
 
-@media only screen and (max-height:700px) {
+@media only screen and (max-height: 700px) {
   html,
   body {
     font-size: 8px;
   }
 }
 
-@media only screen and (max-height:500px) {
+@media only screen and (max-height: 500px) {
   .advice__text {
-    font-size: 8rem
+    font-size: 8rem;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   html,
   body {
     font-size: 9px;
   }
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width: 480px) {
   html,
   body {
     font-size: 8px;
   }
 }
 
-.layout{
-  position:relative;
-  min-height:100%;
-  background-color:#fff;
-  color:#000;
-  transition: background-color .3s ease
+.layout {
+  position: relative;
+  min-height: 100%;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease;
 }
 
-.layout__appready,.layout__view{
-  height:100%;min-height:100%
+.layout__appready,
+.layout__view {
+  height: 100%;
+  min-height: 100%;
 }
 
-.layout.ui--white{
-  background-color:#000;
-  color:#fff
+.layout.ui--white {
+  background-color: #000;
+  color: #fff;
 }
 
 #fga {

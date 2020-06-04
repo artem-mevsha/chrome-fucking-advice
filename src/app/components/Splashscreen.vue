@@ -16,28 +16,28 @@
 <script>
 export default {
   name: 'FgaSplashscreen',
-  data () {
+  data() {
     return {
-      loadingText: 'Идёт блять загрузка'
-    }
-  }
-}
+      loadingText: 'Идёт блять загрузка',
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 *,
 ::after,
 ::before {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body,
 html {
-  height: 100%
+  height: 100%;
 }
 
 html {
-  line-height: 1.2
+  line-height: 1.2;
 }
 
 body {
@@ -45,14 +45,14 @@ body {
   margin: 0;
   font-family: Bebas Neue;
   font-weight: 300;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .layout {
   position: relative;
   min-height: 100%;
   background-color: #000;
-  color: #fff
+  color: #fff;
 }
 
 .splashscreen {
@@ -77,7 +77,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto
+  margin: auto;
 }
 
 .splashscreen__text {
@@ -86,13 +86,13 @@ body {
   display: block;
   padding-top: 24px;
   text-align: center;
-  font-size: 24px
+  font-size: 24px;
 }
 
 .box {
   width: 100px;
   height: 100px;
-  position: absolute
+  position: absolute;
 }
 
 .box-1 {
@@ -101,7 +101,7 @@ body {
   left: 0;
   z-index: 1;
   -webkit-animation: box-1_move 3s ease infinite;
-  animation: box-1_move 3s ease infinite
+  animation: box-1_move 3s ease infinite;
 }
 
 .box-2 {
@@ -109,7 +109,7 @@ body {
   top: 0;
   right: 0;
   -webkit-animation: box-2_move 3s ease infinite;
-  animation: box-2_move 3s ease infinite
+  animation: box-2_move 3s ease infinite;
 }
 
 .box-3 {
@@ -118,7 +118,7 @@ body {
   right: 0;
   z-index: 1;
   -webkit-animation: box-3_move 3s ease infinite;
-  animation: box-3_move 3s ease infinite
+  animation: box-3_move 3s ease infinite;
 }
 
 .box-4 {
@@ -126,7 +126,7 @@ body {
   bottom: 0;
   left: 0;
   -webkit-animation: box-4_move 3s ease infinite;
-  animation: box-4_move 3s ease infinite
+  animation: box-4_move 3s ease infinite;
 }
 
 .splashscreen__fuck {
@@ -141,26 +141,26 @@ body {
   margin: -65px 0 0 -65px;
   line-height: 140px;
   font-size: 40px;
-  font-family: Arial, sans-serif
+  font-family: Arial, sans-serif;
 }
 
 @-webkit-keyframes box-1_move {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(0, 100px);
-    transform: translate(0, 100px)
+    transform: translate(0, 100px);
   }
   50% {
     -webkit-transform: translate(100px, 100px);
-    transform: translate(100px, 100px)
+    transform: translate(100px, 100px);
   }
   75% {
     -webkit-transform: translate(100px, 0);
-    transform: translate(100px, 0)
+    transform: translate(100px, 0);
   }
 }
 
@@ -168,19 +168,19 @@ body {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(0, 100px);
-    transform: translate(0, 100px)
+    transform: translate(0, 100px);
   }
   50% {
     -webkit-transform: translate(100px, 100px);
-    transform: translate(100px, 100px)
+    transform: translate(100px, 100px);
   }
   75% {
     -webkit-transform: translate(100px, 0);
-    transform: translate(100px, 0)
+    transform: translate(100px, 0);
   }
 }
 
@@ -188,19 +188,19 @@ body {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0)
+    transform: translate(-100px, 0);
   }
   50% {
     -webkit-transform: translate(-100px, 100px);
-    transform: translate(-100px, 100px)
+    transform: translate(-100px, 100px);
   }
   75% {
     -webkit-transform: translate(0, 100px);
-    transform: translate(0, 100px)
+    transform: translate(0, 100px);
   }
 }
 
@@ -208,19 +208,19 @@ body {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0)
+    transform: translate(-100px, 0);
   }
   50% {
     -webkit-transform: translate(-100px, 100px);
-    transform: translate(-100px, 100px)
+    transform: translate(-100px, 100px);
   }
   75% {
     -webkit-transform: translate(0, 100px);
-    transform: translate(0, 100px)
+    transform: translate(0, 100px);
   }
 }
 
@@ -228,19 +228,19 @@ body {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px)
+    transform: translate(0, -100px);
   }
   50% {
     -webkit-transform: translate(-100px, -100px);
-    transform: translate(-100px, -100px)
+    transform: translate(-100px, -100px);
   }
   75% {
     -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0)
+    transform: translate(-100px, 0);
   }
 }
 
@@ -248,19 +248,19 @@ body {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px)
+    transform: translate(0, -100px);
   }
   50% {
     -webkit-transform: translate(-100px, -100px);
-    transform: translate(-100px, -100px)
+    transform: translate(-100px, -100px);
   }
   75% {
     -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0)
+    transform: translate(-100px, 0);
   }
 }
 
@@ -268,19 +268,19 @@ body {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(100px, 0);
-    transform: translate(100px, 0)
+    transform: translate(100px, 0);
   }
   50% {
     -webkit-transform: translate(100px, -100px);
-    transform: translate(100px, -100px)
+    transform: translate(100px, -100px);
   }
   75% {
     -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px)
+    transform: translate(0, -100px);
   }
 }
 
@@ -288,19 +288,19 @@ body {
   0%,
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
   25% {
     -webkit-transform: translate(100px, 0);
-    transform: translate(100px, 0)
+    transform: translate(100px, 0);
   }
   50% {
     -webkit-transform: translate(100px, -100px);
-    transform: translate(100px, -100px)
+    transform: translate(100px, -100px);
   }
   75% {
     -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px)
+    transform: translate(0, -100px);
   }
 }
 </style>

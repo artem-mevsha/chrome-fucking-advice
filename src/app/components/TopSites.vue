@@ -1,18 +1,9 @@
 <template>
   <div class="topsites">
     <ul v-if="topSites">
-      <li class="topsites__item"
-        :key="index"
-        v-for="(site, index) in topSites"
-      >
-        <a class="topsites__link"
-          :href="site.url"
-          :title="site.title"
-        >
-          <img class="topsites__favicon"
-            :src="`${FAVICONS_URL}${site.url}`"
-            :alt="site.title"
-          />
+      <li class="topsites__item" :key="index" v-for="(site, index) in topSites">
+        <a class="topsites__link" :href="site.url" :title="site.title">
+          <img class="topsites__favicon" :src="`${FAVICONS_URL}${site.url}`" :alt="site.title" />
           <span class="topsites__title">
             {{ site.title }}
           </span>
@@ -23,28 +14,28 @@
 </template>
 
 <script>
-import { FAVICONS_URL } from '../common/config'
+import { FAVICONS_URL } from '../common/config';
 
 export default {
   name: 'FgaTopSites',
-  data () {
+  data() {
     return {
       topSites: [],
-      FAVICONS_URL
-    }
+      FAVICONS_URL,
+    };
   },
-  mounted () {
+  mounted() {
     if (!chrome || !chrome.topSites) {
-      return
+      return;
     }
 
-    chrome.topSites.get(topSites => {
+    chrome.topSites.get((topSites) => {
       if (topSites.length) {
-        this.topSites = topSites
+        this.topSites = topSites;
       }
-    })
-  }
-}
+    });
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -66,7 +57,7 @@ export default {
   letter-spacing: -4px;
 }
 
-@media only screen and (min-width:480px) and (max-width:767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   .topsites {
     bottom: 12px;
   }
@@ -84,18 +75,18 @@ export default {
   text-decoration: none;
   font-size: 1.4rem;
   line-height: 1.8rem;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   padding: 2px 3px 2px;
   color: currentColor;
   user-select: none;
-  opacity: .5;
-  background: rgba(0,0,0,.2);
-  text-shadow: rgba(0,0,0,.2) 0 0 0.33em;
-  transition: all .3s ease;
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em;
+  transition: all 0.3s ease;
   &:hover {
     opacity: 1;
     background: #ffffff;
-    text-shadow: rgba(255,255,255,.2) 0 0 0.33em;
+    text-shadow: rgba(255, 255, 255, 0.2) 0 0 0.33em;
     color: #000;
     .topsites__favicon {
       filter: grayscale(0);

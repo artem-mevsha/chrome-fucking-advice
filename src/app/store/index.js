@@ -1,39 +1,39 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-import advices from './advices.module'
-import settings from './settings.module'
-import menu from './menu.module'
+import advices from './advices.module';
+import settings from './settings.module';
+import menu from './menu.module';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     isLoading: false,
-    error: null
+    error: null,
   },
   mutations: {
-    SET_LOADING (state, loading) {
-      state.isLoading = loading
+    SET_LOADING(state, loading) {
+      state.isLoading = loading;
     },
-    SET_ERROR (state, error) {
-      state.error = error
-    }
+    SET_ERROR(state, error) {
+      state.error = error;
+    },
   },
   actions: {
-    INIT_PRELOADER ({ state, commit }) {
+    INIT_PRELOADER({ state, commit }) {
       // if (!state.isLoading) {
       //   commit('SET_LOADING', true)
       // }
 
       if (state.error) {
-        commit('SET_ERROR', null)
+        commit('SET_ERROR', null);
       }
-    }
+    },
   },
   modules: {
     advices,
     settings,
-    menu
-  }
-})
+    menu,
+  },
+});

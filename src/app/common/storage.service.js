@@ -4,12 +4,12 @@
  * @param {String} key to save
  * @param {Any} value to save
  */
-function setStorageItem (key, value) {
+function setStorageItem(key, value) {
   if (chrome && chrome.storage) {
     // Save it using the Chrome extension storage API.
-    chrome.storage.sync.set({ [key]: value })
+    chrome.storage.sync.set({ [key]: value });
   } else if (localStorage) {
-    localStorage.setItem(key, value)
+    localStorage.setItem(key, value);
   }
 }
 
@@ -19,22 +19,19 @@ function setStorageItem (key, value) {
  * @param {String} key to get
  * @returns {Function} Promise with {String} or {Null} as param
  */
-function getStorageItem (key) {
-  return new Promise((resolve, reject) => {
+function getStorageItem(key) {
+  return new Promise((resolve) => {
     if (chrome && chrome.storage) {
       // Get it using the Chrome extension storage API.
-      chrome.storage.sync.get([key], result => {
-        resolve(result[key])
-      })
+      chrome.storage.sync.get([key], (result) => {
+        resolve(result[key]);
+      });
     } else if (localStorage) {
-      resolve(localStorage.getItem(key))
+      resolve(localStorage.getItem(key));
     } else {
-      resolve(null)
+      resolve(null);
     }
-  })
+  });
 }
 
-export {
-  setStorageItem,
-  getStorageItem
-}
+export { setStorageItem, getStorageItem };
