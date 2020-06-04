@@ -1,34 +1,31 @@
-# chrome-fucking-advice
+## Usage
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
+```bash
+$ npm install
+$ npm run build
 ```
 
-### Compiles and watch to debug chrome extenstion in developlent mode
-```
-yarn run build-watch
-```
+### `npm run build`
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+Build the extension into `dist` folder for **production**.
 
-### Run your tests
-```
-yarn run test
-```
+### `npm run build:dev`
 
-### Lints and fixes files
-```
-yarn run lint
-```
+Build the extension into `dist` folder for **development**.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### `npm run watch`
+
+Watch for modifications then run `npm run build`.
+
+### `npm run watch:dev`
+
+Watch for modifications then run `npm run build:dev`.
+
+It also enable [Hot Module Reloading](https://webpack.js.org/concepts/hot-module-replacement), thanks to [webpack-extension-reloader](https://github.com/rubenspgcavalcante/webpack-extension-reloader) plugin.
+
+:warning: Keep in mind that HMR only works for your **background** entry.
+
+### `npm run build-zip`
+
+Build a zip file following this format `<name>-v<version>.zip`, by reading `name` and `version` from `manifest.json` file.
+Zip file is located in `dist-zip` folder.
