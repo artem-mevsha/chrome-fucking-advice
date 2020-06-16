@@ -1,4 +1,12 @@
 {
+  "extName": {
+    "message": "Fucking great advice",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Shows incredible advice on your new tab page (Russian language only). fucking-great-advice.ru is used to fetch the best advice",
+    "description": "Extenstion description"
+  },
   "newtab": {
     "message": "New Tab",
     "description": "Page title for New Tab"

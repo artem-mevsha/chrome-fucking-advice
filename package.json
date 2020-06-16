@@ -1,6 +1,6 @@
 {
   "name": "chrome-fucking-advice",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "This extensions fetches advice from http://fucking-great-advice.ru and shows it on chrome start page",
   "author": "Artem Mevsha",
   "license": "MIT",
@@ -24,8 +24,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
     "vue": "^2.6.11",
-    "vuex": "^3.4.0",
-    "webextension-polyfill": "^0.6.0"
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

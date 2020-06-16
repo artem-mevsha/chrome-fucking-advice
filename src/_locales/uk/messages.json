@@ -1,4 +1,12 @@
 {
+  "extName": {
+    "message": "Охуенный блять совет",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Відображає чудові поради у новій вкладці Вашого браузеру (поради лише російською мовою). Використовується fucking-great-advice.ru як джерело порад та мотивації",
+    "description": "Extenstion description"
+  },
   "newtab": {
     "message": "Нова вкладка"
   },

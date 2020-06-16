@@ -1,4 +1,12 @@
 {
+  "extName": {
+    "message": "Охуенный блять совет",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Показывает на стартовой странице охуенный совет. Использует fucking-great-advice.ru как кладезь мудрости и мотивации",
+    "description": "Extenstion description"
+  },
   "newtab": {
     "message": "Новая вкладка",
     "description": "Page title for New Tab"
