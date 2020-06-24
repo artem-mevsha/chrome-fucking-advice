@@ -4,7 +4,7 @@
     "description": "Extension name"
   },
   "extDescription": {
-    "message": "Shows incredible advice on your new tab page (Russian language only). fucking-great-advice.ru is used to fetch the best advice",
+    "message": "Warning! Frequent use of profanity! Shows incredible advice on your new tab page (Russian language only).",
     "description": "Extenstion description"
   },
   "newtab": {

@@ -17,9 +17,7 @@
     }
   },
   "permissions": [
-    "activeTab",
-    "storage",
-    "https://fucking-great-advice.ru/"
+    "activeTab"
   ],
   "chrome_url_overrides": {
     "newtab": "app/app.html"
