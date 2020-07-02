@@ -3,21 +3,21 @@
     <article>
       <fga-advice />
     </article>
-    <!-- <footer class="frontpage__footer frontpage__footer_hoverable">
+    <footer class="frontpage__footer frontpage__footer_hoverable">
       <fga-top-sites v-if="isTopSitesEnabled" />
-    </footer> -->
+    </footer>
   </section>
 </template>
 
 <script>
 import FgaAdvice from './Advice';
-// import FgaTopSites from './TopSites';
+import FgaTopSites from './TopSites';
 
 export default {
   name: 'FgaFrontpage',
   components: {
     FgaAdvice,
-    // FgaTopSites,
+    FgaTopSites,
   },
   computed: {
     error() {
@@ -26,9 +26,9 @@ export default {
     advice() {
       return this.$store.getters.activeAdvice;
     },
-    // isTopSitesEnabled() {
-    //   return this.$store.getters.optionByAlias('top-sites');
-    // },
+    isTopSitesEnabled() {
+      return this.$store.getters.optionByAlias('top-sites');
+    },
   },
   methods: {
     nextAdvice() {

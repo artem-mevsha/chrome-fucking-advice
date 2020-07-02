@@ -14,11 +14,11 @@ const state = {
       name: 'Теги',
       value: true,
     },
-    // {
-    //   alias: 'top-sites',
-    //   name: 'Часто посещаемые сайты',
-    //   value: true,
-    // },
+    {
+      alias: 'top-sites',
+      name: 'Часто посещаемые сайты',
+      value: true,
+    },
   ],
 };
 
