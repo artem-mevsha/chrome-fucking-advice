@@ -1,4 +1,12 @@
 {
+  "extName": {
+    "message": "Охуенный блять совет",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Містить ненормативну лексику! Відображає чудові поради у новій вкладці Вашого браузеру (поради лише російською мовою).",
+    "description": "Extenstion description"
+  },
   "newtab": {
     "message": "Нова вкладка"
   },

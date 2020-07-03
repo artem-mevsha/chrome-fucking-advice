@@ -1,4 +1,12 @@
 {
+  "extName": {
+    "message": "Fucking great advice",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Warning! Frequent use of profanity! Shows incredible advice on your new tab page (Russian language only).",
+    "description": "Extenstion description"
+  },
   "newtab": {
     "message": "New Tab",
     "description": "Page title for New Tab"

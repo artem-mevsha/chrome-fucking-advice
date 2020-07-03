@@ -10,7 +10,6 @@ const config = {
   mode: process.env.NODE_ENV,
   context: __dirname + '/src',
   entry: {
-    'background': './background.js',
     'app/app': './app/app.js',
   },
   output: {
@@ -19,6 +18,9 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.vue'],
+  },
+  optimization: {
+    minimize: false,
   },
   module: {
     rules: [
