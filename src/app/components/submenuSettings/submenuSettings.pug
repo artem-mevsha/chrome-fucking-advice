@@ -1,0 +1,15 @@
+include ../../../../node_modules/bemto.pug/bemto
+
+nav.submenu__nav.submenu__nav_aux
+  +b.settings
+    +e.content
+      .submenu__link.submenu__link_size_small.submenu__link_disabled Дизайн
+
+      +e.UL.items(
+        v-if='options'
+      )
+        +e.LI.item(
+          :key='index'
+          v-for='(option, index) in options'
+        )
+          fga-settings-checkbox(:option='option')

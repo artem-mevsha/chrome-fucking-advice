@@ -1,0 +1,64 @@
+.topsites
+  position absolute
+  width 75%
+  max-width 75vw
+  margin 0
+  padding 0 2rem
+  position absolute
+  left 50%
+  transform translateX(-50%)
+  bottom 34px
+  height 20px
+  z-index 2
+  user-select none
+  text-align center
+  overflow hidden
+  letter-spacing -4px
+
+  @media only screen and (min-width:480px) and (max-width:767px)
+    bottom 12px
+
+  &__item
+    display inline-block
+    margin 0 4px 4px
+    letter-spacing normal
+
+  &__link
+    display block
+    text-transform none
+    text-decoration none
+    font-size 1.4rem
+    line-height 1.8rem
+    letter-spacing 0.02em
+    padding 2px 3px 2px
+    color currentColor
+    user-select none
+    opacity 0.5
+    background rgba(0, 0, 0, 0.2)
+    text-shadow rgba(0, 0, 0, 0.2) 0 0 0.33em
+    transition all 0.3s ease
+
+    &:hover
+      opacity 1
+      background #ffffff
+      text-shadow rgba(255, 255, 255, 0.2) 0 0 0.33em
+      color #000
+
+      .topsites__favicon
+        filter grayscale(0)
+
+  &__favicon
+    display inline-block
+    max-width 16px
+    max-height 16px
+    vertical-align middle
+    margin-right 4px
+    filter grayscale(50%)
+
+  &__title
+    display inline-block
+    vertical-align middle
+    max-width 130px
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap

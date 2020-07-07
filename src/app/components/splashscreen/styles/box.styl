@@ -1,0 +1,94 @@
+.box
+  width 100px
+  height 100px
+  position absolute
+
+.box-1
+  background-color #f09
+  top 0
+  left 0
+  z-index 1
+  animation box-1_move 3s ease infinite
+
+.box-2
+  background-color #0f0
+  top 0
+  right 0
+  animation box-2_move 3s ease infinite
+
+.box-3
+  background-color #70f
+  bottom 0
+  right 0
+  z-index 1
+  animation box-3_move 3s ease infinite
+
+.box-4
+  background-color #fe0
+  bottom 0
+  left 0
+  animation box-4_move 3s ease infinite
+
+@keyframes box-1_move {
+  0%,
+  100% {
+    transform translate(0, 0)
+  }
+  25% {
+    transform translate(0, 100px)
+  }
+  50% {
+    transform translate(100px, 100px)
+  }
+  75% {
+    transform translate(100px, 0)
+  }
+}
+
+@keyframes box-2_move {
+  0%,
+  100% {
+    transform translate(0, 0)
+  }
+  25% {
+    transform translate(-100px, 0)
+  }
+  50% {
+    transform translate(-100px, 100px)
+  }
+  75% {
+    transform translate(0, 100px)
+  }
+}
+
+@keyframes box-3_move {
+  0%,
+  100% {
+    transform translate(0, 0)
+  }
+  25% {
+    transform translate(0, -100px)
+  }
+  50% {
+    transform translate(-100px, -100px)
+  }
+  75% {
+    transform translate(-100px, 0)
+  }
+}
+
+@keyframes box-4_move {
+  0%,
+  100% {
+    transform translate(0, 0)
+  }
+  25% {
+    transform translate(100px, 0)
+  }
+  50% {
+    transform translate(100px, -100px)
+  }
+  75% {
+    transform translate(0, -100px)
+  }
+}

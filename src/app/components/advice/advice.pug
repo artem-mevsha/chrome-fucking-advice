@@ -1,0 +1,62 @@
+include ../../../../node_modules/bemto.pug/bemto
+
++b.advice
+  +e.aligner
+    transition(
+      v-if="error" 
+      name="advice-slide" 
+      mode="out-in"
+    )
+      +e.content(:key="error")
+        +e.H1.text
+          fga-advice-link(
+            :advice="error"
+            @click.native="checkConnection"
+          )
+
+    transition(
+      v-else-if="advice"
+      name="advice-slide"
+      mode="out-in"
+    )
+      +e.content(:key="advice.id")
+        +e.H1.text
+          fga-advice-link(
+            :advice="advice.html"
+            @click.native="nextAdvice"
+          )
+
+        +e.A.btn_external(
+          v-if="advice.link"
+          :href="advice.link.href | externalUrlFilter"
+        )
+          | {{ advice.link.text }}
+
+        transition(
+          appear
+          name="tags-slide"
+        )
+          +e.UL.tags(
+            v-if="advice.tags && isTagsEnabled"
+          )
+            +e.LI.tag(
+              :key="index"
+              v-for="(tag, index) in advice.tags"
+            )
+              +e.A.tag-link(
+                :class="{ 'advice__tag-link_active': isTagActive(tag.alias) }"
+                @click.prevent="chooseTag(tag.alias)"
+              )
+                | #&thinsp;
+                +e.SPAN.tag-name {{ tag.name }}
+
+    transition(
+      appear
+      name="bg-scale"
+      mode="out-in"
+    )
+      +e.bg(
+        :key="image"
+        :style="{ backgroundImage: `url(${image})` }"
+        style="transform: matrix(1, 0, 0, 1, 0, 0);"
+      )

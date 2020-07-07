@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import store from './store';
-import App from './App.vue';
+import App from './components/_app/app.vue';
 import ApiService from './common/api.service';
 
 library.add(
@@ -22,6 +22,7 @@ library.add(
   faYoutube,
   faGithub,
 );
+
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 global.browser = require('webextension-polyfill');

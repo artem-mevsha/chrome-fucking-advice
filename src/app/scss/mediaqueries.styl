@@ -1,0 +1,22 @@
+// 320-1024
+mobile()
+  @media only screen and (min-width:320px) and (max-width:735px)
+    {block}
+
+// 1024-1366
+ipad()
+  @media only screen and (min-width:736px) and (max-width:1024px)
+    {block}
+
+// 1024+ (1440)
+desktop()
+  @media only screen and (min-width:1025px)
+    {block}
+
+landscape()
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape)
+    {block}
+
+print()
+  @media print
+    {block}

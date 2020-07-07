@@ -5,6 +5,10 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ExtensionReloader = require('webpack-extension-reloader');
 const { VueLoaderPlugin } = require('vue-loader');
 const { version } = require('./package.json');
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
+const path = require('path');
 
 const config = {
   mode: process.env.NODE_ENV,
@@ -44,6 +48,25 @@ const config = {
       {
         test: /\.sass$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader?indentedSyntax'],
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'stylus-loader',
+            options: {
+              use: [function (stylus) {
+                stylus.import(path.join(__dirname, './src/app/scss/index'));
+              }]
+            }
+          },
+        ],
+      },
+      {
+        test: /\.pug$/,
+        loaders: ['pug-html-loader']
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
@@ -93,7 +116,7 @@ const config = {
         },
       },
     ]),
-  ],
+  ]
 };
 
 if (config.mode === 'production') {
