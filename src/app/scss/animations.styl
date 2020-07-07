@@ -1,0 +1,166 @@
+//-
+.submenu-main-slide
+  &-enter-active
+    animation submenu-main-slide-in .5s ease-out forwards
+  
+  &-leave-active
+    animation submenu-main-slide-out .5s ease-out forwards
+
+@keyframes submenu-main-slide-out
+  from {
+    transform translateY(0)
+    opacity 1
+  }
+  to {
+    transform translateY(-50%)
+    opacity 0
+  }
+
+@keyframes submenu-main-slide-in
+  from {
+    transform translateY(-50%)
+    opacity 0
+  }
+  to {
+    transform translateY(0)
+    opacity 1
+  }
+
+//-
+.submenu-secondary-slide
+  &-enter-active
+    animation submenu-secondary-slide-in .5s ease-out forwards
+  
+  &-leave-active
+    animation submenu-secondary-slide-out .1s ease-out forwards
+
+@keyframes submenu-secondary-slide-out
+  from {
+    opacity 1
+  }
+  to {
+    opacity 0
+  }
+
+@keyframes submenu-secondary-slide-in
+  from {
+    transform translateY(100%)
+  }
+  to {
+    transform translateY(0)
+  }
+
+//-
+.counter-slide
+  &-enter-active
+    animation counter-slide-in .25s ease-out forwards
+  
+  &-leave-active
+    animation counter-slide-out .25s ease-out forwards
+
+@keyframes counter-slide-out
+  from {
+    transform translateY(0)
+  }
+  to {
+    transform translateY(-100%)
+  }
+
+@keyframes counter-slide-in
+  from {
+    transform translateY(100%)
+  }
+  to {
+    transform translateY(0)
+  }
+
+//-
+.bg-scale
+  &-enter-active
+    animation bg-scale-in .25s ease-out forwards
+  
+  &-leave-active
+    animation bg-scale-out .25s ease-out forwards
+
+@keyframes bg-scale-out
+  from {
+    transform scale(1)
+  }
+  to {
+    transform scale(0.85)
+  }
+
+@keyframes bg-scale-in
+  from {
+    transform scale(0.85)
+  }
+  to {
+    transform scale(1)
+  }
+
+//-
+.advice-slide
+  &-enter-active
+    animation advice-slide-in .25s ease-out forwards
+  
+  &-leave-active
+    animation advice-slide-out .25s ease-out forwards
+
+@keyframes advice-slide-out
+  from {
+    transform translateX(0)
+  }
+  to {
+    transform translateX(-200%)
+  }
+
+@keyframes advice-slide-in
+  from {
+    transform translateX(200%)
+  }
+  to {
+    transform translateX(0)
+  }
+
+//-
+.tags-slide
+  &-enter-active
+    animation tags-slide .5s ease-out forwards
+
+@keyframes tags-slide
+  from {
+    opacity 0
+    transform translateY(-100%)
+  }
+  to {
+    opacity 1
+    transform translateY(0)
+  }
+
+//-
+.icon-rotate
+  &-enter-active
+    animation icon-rotate-in .25s ease-out forwards
+  
+  &-leave-active
+    animation icon-rotate-out .25s ease-out forwards
+
+@keyframes icon-rotate-out
+  from {
+    transform rotate(0)
+    opacity 1
+  }
+  to {
+    transform rotate(90deg)
+    opacity 0
+  }
+
+@keyframes icon-rotate-in
+  from {
+    transform rotate(90deg)
+    opacity 0
+  }
+  to {
+    transform rotate(180deg)
+    opacity 1
+  }

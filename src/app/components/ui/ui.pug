@@ -1,0 +1,23 @@
+include ../../../../node_modules/bemto.pug/bemto
+
+header.ui.ui_hoverable
+  .ui__logo
+    a.ui__logo-text(
+      v-if='isLogoEnabled',
+      :href='baseUrl'
+    )
+      | 2Охуенный блять совет
+
+    .ui__logo-tag(v-if='activeTag')
+      a.ui__chapter(
+        @click.prevent='resetTag'
+      )
+        | {{ activeTag.name }} 
+
+  div
+    .ui__menu-icon(
+      :class="{ 'ui__menu-icon_opened': isMenuOpened }",
+      @click='toggleMenu'
+    )
+
+    fga-submenu(v-if='isMenuOpened')

@@ -1,0 +1,22 @@
+include ../../../../node_modules/bemto.pug/bemto
+div
+  +b.LABEL.checkbox(
+    :for="option.alias"
+  )
+    +e.SPAN.icon
+      font-awesome-icon(
+        v-if="option.value"
+        :icon="['fas', 'check-square']"
+      )
+      font-awesome-icon(
+        v-else
+        :icon="['fas', 'square']"
+      )
+    | {{ option.name }}
+
+  input(
+    :id="option.alias"
+    type="checkbox"
+    @change="toggleOption(option)"
+    :checked="option.value ? 'checked' : ''"
+  )

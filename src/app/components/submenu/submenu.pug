@@ -1,0 +1,44 @@
+include ../../../../node_modules/bemto.pug/bemto
+
+transition(
+  appear
+  name='submenu-main-slide'
+  mode='out-in'
+)
+  +b.SECTION.submenu
+    +e.content
+      +e.NAV.nav_main
+        ul(v-if='menuItems')
+          li(
+            :key='menuItem.slug',
+            v-for='menuItem in menuItems'
+          )
+            a.submenu__link(
+              v-if='menuItem.hasSubMenu'
+              :class='{ submenu__link_active: menuItem.slug === activeSubmenu }'
+              @click.prevent='showSubmenu(menuItem.slug)'
+            )
+              | {{ menuItem.name }}
+
+            a.submenu__link(
+              v-else
+              :href='menuItem.url'
+            )
+              | {{ menuItem.name }}
+
+        .social
+          a.social__link(
+            :key='index'
+            v-for='(link, index) in social'
+            :href='link.url'
+          )
+            font-awesome-icon(:icon="['fab', link.alias]")
+
+      transition(
+        appear
+        name='submenu-secondary-slide'
+        mode='out-in'
+      )
+        tags(v-if="activeSubmenu === 'tags'")
+
+      settings(v-if="activeSubmenu === 'settings'")

@@ -1,0 +1,6 @@
+.layout.ui--white#app
+  splashscreen(v-if="isLoading")
+
+  .layout__appready(v-if="!isLoading")
+    ui
+    frontpage.layout__view
