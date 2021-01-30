@@ -6,13 +6,13 @@ header.ui.ui_hoverable
       v-if='isLogoEnabled',
       :href='baseUrl'
     )
-      | 2Охуенный блять совет
+      | Охуенный блять совет
 
     .ui__logo-tag(v-if='activeTag')
       a.ui__chapter(
         @click.prevent='resetTag'
       )
-        | {{ activeTag.name }} 
+        | {{ activeTag.name }}
 
   div
     .ui__menu-icon(
