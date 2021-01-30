@@ -31,7 +31,6 @@ $ npm run watch
 3. Load extension from `/dist` folder
 
 3. Happy coding!
-```
 
 ## Usage in development moode
 
