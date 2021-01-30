@@ -1,6 +1,6 @@
 {
   "name": "chrome-fucking-advice",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This extensions fetches advice from http://fucking-great-advice.ru and shows it on chrome start page",
   "author": "Artem Mevsha",
   "license": "MIT",
